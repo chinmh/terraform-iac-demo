@@ -25,24 +25,3 @@ terraform apply -auto-approve
 Plan: 23 to add, 0 to change, 0 to destroy.
 ```
 6. Once complete terraform apply, you may check your AWS account for the resources.
-
-# How to test the connectivity for public ec2
-1. Please download the acntfdemo-key.pem.
-2. Follow the instruction given in AWS EC2 portal to connect via ssh.
-
-# How to test the connectivity for private ec2
-1. Ensure you are connected public ec2, because in this demo, the connection to private ec2 only can be connected from public ec2. 
-2. Create a private key name acntfdemo-key.pem. Copy and paste from the downloaded key.
-3. Once the private key is created, follow the instruction given in AWS EC2 portal to connect via ssh.
-
-# How to decommission the resources created
-1. After the demo is completed, do remember to decommision the resources created via the following command:
-```
-terraform destroy
-```
-2. You shall see the following output at the end:
-```
-Plan: 0 to add, 0 to change, 23 to destroy.
-```
-3. Do remember to verify the resources in AWS console.
-4. Lastly do remember to revoke the access key id and secret key, and also delete the s3 bucket.
